@@ -9,7 +9,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'places',
     pathMatch: 'full',
   },
   {
@@ -24,7 +24,8 @@ const routes: Routes = [
   },
   {
     path: 'bookings',
-    loadChildren: () => import('./bookings/bookings.module').then( m => m.BookingsPageModule)
+    loadChildren: () =>
+      import('./bookings/bookings.module').then((m) => m.BookingsPageModule),
   },
 ];
 
